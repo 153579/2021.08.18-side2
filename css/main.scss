@@ -1,0 +1,98 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "_mixin";
+@import "reset";
+
+body {
+    font-family: monospace;
+    background: #05051d;
+
+    .wrap {
+        width: 500px;
+        height: 300px;
+        margin: 40px auto;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 100%;
+            height: 100%;
+
+            li {
+                display: block;
+                width: 33.33%;
+                height: 50%;
+                line-height: 150px;
+                font-size: 55px;
+                color: #fff;
+                text-align: center;
+                float: left;
+                position: relative;
+            }
+        }
+    }
+
+    .borderOverlay {
+        width: 70%;
+        height: 70%;
+        background: rgba($color: #000000, $alpha: 0.1);
+        border: 3px solid deepskyblue;
+        border-radius: 30px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        animation: 0.25s enter;
+
+        i {
+            position: absolute;
+            font-size: 29px;
+            color: #fff;
+            top: -15px;
+            right: -13px;
+            background: deepskyblue;
+            padding: 1px;
+            border-radius: 50%;
+            animation: 0.75s enter2;
+        }
+    }
+}
+
+@keyframes enter {
+    0% {
+        transform: scale(0) rotate(-90deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes enter2 {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+
+    75%{
+        transform: scale(1.25);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+// media query
+
+@include mobile {}
+
+@include tablet {}
+
+@include desktop {}
