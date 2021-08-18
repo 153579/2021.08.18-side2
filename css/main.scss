@@ -6,7 +6,9 @@
 
 body {
     font-family: monospace;
-    background: #05051d;
+    background: linear-gradient(315deg, $mainColor 0%, #0d324d 74%);
+    background-repeat: no-repeat;
+    height: 100vh;
 
     .wrap {
         width: 500px;
